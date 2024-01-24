@@ -1,0 +1,59 @@
+/*Start Varabiles*/
+:root{
+    --main-color:#10cab7;
+    --secondry-color:#2c4755;
+}
+/*End Varabiles*/
+
+/* Start Global Rules*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Start header */
+.header{
+    padding: 20px;
+    background-color: #2c4755;
+}
+.header .container .row .col{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.header .container .row .col a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.header .icon{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.header .container input{
+    position: relative;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+/* End header */
+
+/* start header */
+
+.store{
+    background-color: gray;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+/* end header */
