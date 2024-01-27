@@ -39,17 +39,9 @@
 
     <!-- start header -->
     @include('Layout.header')
+    @yield('content')
     <!-- end header -->
 
-    <!-- start body -->
-    <div class="store">
-        @include('shared.success_message')
-        <div class="container">
-            @include('Layout.card-item')
-        </div>
-    </div>
-
-    <!-- end body -->
 </body>
 
 </html>
