@@ -1,5 +1,5 @@
-<div class="header">
-    <div class="container">
+<div class="header container-fluid header">
+    <div class="">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="{{route('home')}}">Logo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -41,23 +41,8 @@
                         <a class="nav-link" href="#">Account</a>
                     </li>
 
-
-                    <!-- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-</li> -->
-                    <!-- <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-</li> -->
-
- </ul>
-             @include('Layout.search-box')
+    </ul>
+            @include('Layout.search-box')
             </div>
         </nav>
     </div>
