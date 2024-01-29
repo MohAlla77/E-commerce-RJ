@@ -34,12 +34,13 @@
                         <button type="submit" class="btn btn-danger btn-sm">Logout</button>
                       </form>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('manage')}}">Account</a>
+                    </li>
 
                     @endauth
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Account</a>
-                    </li>
+
 
 
                     <!-- <li class="nav-item dropdown">
