@@ -42,7 +42,7 @@
     <!-- end header -->
 
     <!-- start body -->
-    <div class="store container-fluid header border">
+    <div class="store container-fluid border">
         @include('shared.success_message')
 
             @include('Layout.card-item')
