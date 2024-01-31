@@ -44,7 +44,7 @@
     <!-- start body -->
     <div class="store container-fluid border">
         @include('shared.success_message')
-        <div class="row row-cols-auto">
+        <div class="row">
             @foreach ($StoreItems as $item)
                 @include('Layout.card-item')
             @endforeach
