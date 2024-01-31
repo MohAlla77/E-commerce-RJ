@@ -42,12 +42,44 @@
     <!-- end header -->
 
     <!-- start body -->
-    <div class="store container-fluid header border">
+    <div class="store">
         @include('shared.success_message')
-        <div class="row row-cols-auto">
-            @foreach ($StoreItems as $item)
-                @include('Layout.card-item')
-            @endforeach
+        <div class="container">
+            <div class="row">
+
+                <!--  Main Card -->
+                @if ($editing ?? false)
+                    <form method="POST" action="{{ route('manage.update', $item->id) }}">
+                        @csrf
+                        @method('put')
+                        <textarea name="content" id="content">{{ $item->title }}</textarea>
+                        @error('content')
+                            <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
+                        @enderror
+                        <button class="btn  btn-primary">Update</button>
+                    </form>
+                @else
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./Images/Gallery 3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $item->title }}</h5>
+                                <p class="card-title">Created_by {{ $item->user->email }}</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <form method="POST" action="{{ route('manage.destroy', $item->id) }}">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            </div>
+
         </div>
     </div>
 

@@ -44,6 +44,8 @@
     <!-- start body -->
     <div class="store">
         @include('shared.success_message')
+        @include('manage.add_item')
+
         <div class="container">
             <div class="row">
                 <!--  Main Card -->
@@ -53,14 +55,17 @@
                             <img src="./Images/Gallery 3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item->title }}</h5>
-                                <h5 class="card-title">Created_by {{ $item->user->email }}</h5>
+                                <p class="card-title">Created_by {{ $item->user->email }}</p>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's content.</p>
-                                <form method="POST" action="{{ route('Item.destroy', $item->id) }}">
+                                <form method="POST" action="{{ route('manage.destroy', $item->id) }}">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger">Delete</button>
+                                    <a href="{{route('manage.show' , $item->id)}}">View</a>
+                                    <a href="{{route('manage.edit' , $item->id)}}">Edit</a>
                                 </form>
+
 
                             </div>
                         </div>

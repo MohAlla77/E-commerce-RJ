@@ -28,10 +28,17 @@ Route::post('/login', [AuthController::class , 'authenticate']);
 
 Route::post('/logout', [AuthController::class , 'logout'])->name('logout');
 
-Route::get('/manage', [ItemController::class , 'show'])->name('manage');
+Route::get('/manage', [ItemController::class , 'index'])->name('manage');
+Route::get('/manage/{id}', [ItemController::class , 'show'])->name('manage.show');
+Route::get('/manage/{item}/edit', [ItemController::class , 'edit'])->name('manage.edit');
+Route::put('/manage/{item}', [ItemController::class , 'update'])->name('manage.update');
+Route::post('/manage', [ItemController::class , 'store'])->name('manage.create');
+Route::delete('/manage/{id}', [ItemController::class , 'destroy'])->name('manage.destroy')->middleware('auth');
 
 
-Route::delete('/Item/{id}', [ItemController::class , 'destroy'])->name('Item.destroy')->middleware('auth');
+
+
+
 
 
 
