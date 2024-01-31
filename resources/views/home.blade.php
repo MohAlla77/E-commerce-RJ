@@ -42,11 +42,10 @@
     <!-- end header -->
 
     <!-- start body -->
-    <div class="store">
+    <div class="store container-fluid header border">
         @include('shared.success_message')
-        <div class="container">
+
             @include('Layout.card-item')
-        </div>
     </div>
 
     <!-- end body -->
